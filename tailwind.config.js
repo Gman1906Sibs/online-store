@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: [ require("tailwind-gradient-mask-image"), './src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

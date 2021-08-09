@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    .topText {
+        @apply text-xs;
+    }
+
+    .bottomText {
+        @apply text-sm font-bold;
+    }
+
+    .sliderImage {
+        @apply z-[1] mb-[-130px] max-h-[780px];
+    }
+
+}
