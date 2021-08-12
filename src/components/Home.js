@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import HomeSlider from "./HomeSlider";
 import ProductCategory from "./ProductCategory";
 import VehicleCategory from "./VehicleCategory";
@@ -43,6 +44,8 @@ function Home() {
                     className=" w-[100%] bg-[#ffffff] p-[5px] rounded-lg mx-[40px] md:max-w-[90%] "
                 />
             </div>
+
+            <Footer />
             
         </div>
     )
