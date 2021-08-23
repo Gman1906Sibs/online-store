@@ -1,19 +1,28 @@
 import Logo from "../images/logo.png";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from "react-router-dom";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { useSelector } from "react-redux";
 
 function Header() {
+
+    const cart = useSelector((state) => state);
+
+    const items = cart.cart.cart.length;
+
     return (
         <div className=" z-50 sticky top-0 w-[100vw] max-w-[1500px] ">
             <div className=" px-4 flex justify-between items-center bg-black text-[#888888] text-xs p-2 sticky z-20 top-0 ">
-            
-                <img src={Logo} alt="" className=" h-9 rounded-md " />
+                <Link to="/">
+                    <img src={Logo} alt="" className=" h-9 rounded-md " />
+                </Link>
 
-                <div className=" hidden lg:flex  px-4 ">
+                <div className=" hidden lg:flex  px-4 items-center ">
                     <span>
-                        #
+                        <LocationOnIcon/>
                     </span>
-                    <div className=" flex flex-col items-center ">
+                    <div className=" flex flex-col  ">
                         <span  className=" topText ">
                             We also deliver to
                         </span>
@@ -48,10 +57,15 @@ function Header() {
                         </span>
                     </div>
 
-                    <div className=" justify-center "> 
-                        <ShoppingCartIcon className=" " />
-                        <span>0</span>
-                    </div>
+                    
+                        <Link to="/checkout">
+                            <div className=" justify-center ">
+                                <ShoppingCartIcon className=" " />
+                                <span>{items}</span>
+                            </div>
+                        </Link>
+                        
+                   
 
                 </div>
             </div>

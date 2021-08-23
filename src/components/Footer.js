@@ -20,7 +20,7 @@ function Footer() {
                 
             </div>
 
-            <div className=" ml-[5%] hidden md:flex ">
+            <div className=" ml-[5%] hidden lg:flex ">
                 <form action="">
                     <label htmlFor="Emaii">Email Address</label> <br/>
                     <input type="email" id="Email" placeholder="Enter email" className=" py-1 rounded-lg px-3 w-full " />

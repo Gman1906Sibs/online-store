@@ -1,18 +1,24 @@
+import{ Link } from "react-router-dom";
 
-
-function ProductCategory() {
+function ProductCategory({image, title}) {
     return (
-        <div className=" bg-white w-full mx-[20px] my-[10px] px-3 py-2 rounded-lg transition transform hover:scale-110 " >
-            <p className=" mx-3 my-2 ">Engine Spares</p>
+        <div className="bg-white w-full mx-[20px] my-[10px] px-3 py-2 rounded-lg transition transform md:hover:scale-110  ">
+            <Link to="/store">
+                <button className=""  >
+                    <p className=" text-left mx-3 my-2 ">{title}</p>
 
-            <img src="https://media.autopro.com.au/media/catalog/category/full_sets_engine.jpg"
-                alt="" 
-                className=" "
-            />
+                    <img src= {image}
+                        alt="" 
+                        className="  "
+                    />
 
-            <button className=" mx-3 my-2 text-[#ff4d00] " >shop now</button>
-            
+                    <p className=" text-left mx-3 my-2 text-[#ff4d00] " >shop now</p>
+                    
+                </button>
+            </Link>
         </div>
+        
+        
     )
 }
 
