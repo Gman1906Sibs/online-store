@@ -17,25 +17,24 @@ function Home() {
 
 
     return (
-        <div className=" bg-black min-h-[100vh] max-w-[1500px] " >
+        <div className=" bg-black min-h-[100vh] max-w-[100vw] lg:max-w-[1500px] " >
             <div className=" hidden lg:flex " >
                 <HomeSlider />
             </div>
-
-            <div className=" z-[-5] max-w-[1500px] flex-col  md:flex md:flex-row md:justify-evenly ">
-                <VehicleCategory 
-                    img="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-85e0e9ab23134961c88e4ecea2bff53f.jpg" 
-                    title = "Car Spares "
-                />
-                <VehicleCategory 
-                    img="https://i.pinimg.com/originals/3a/89/8c/3a898c9553278c317cd8fae633f107b6.jpg"
-                    title="Bike Spare"
-                />
-                <VehicleCategory 
-                    img="https://s3-ap-southeast-2.amazonaws.com/imotor-cms/images_cms/fcb772f5-69d6-47c2-a3db-87dcd413fa74.jpg"
-                    title= "Truck Spares"
-                /> 
-            </div>
+                <div className=" z-[-5] max-w-[1500px] flex-col  md:flex md:flex-row md:justify-evenly ">
+                    <VehicleCategory 
+                        img="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-85e0e9ab23134961c88e4ecea2bff53f.jpg" 
+                        title = "Car Spares "
+                    />
+                    <VehicleCategory 
+                        img="https://i.pinimg.com/originals/3a/89/8c/3a898c9553278c317cd8fae633f107b6.jpg"
+                        title="Bike Spare"
+                    />
+                    <VehicleCategory 
+                        img="https://s3-ap-southeast-2.amazonaws.com/imotor-cms/images_cms/fcb772f5-69d6-47c2-a3db-87dcd413fa74.jpg"
+                        title= "Truck Spares"
+                    /> 
+                </div>
 
             <div className=" hidden md:flex justify-center ">
                 <img src="https://www.deere.com/assets/images/common/products/articulated-dump-trucks/adt-hero-1366x347.jpg" 
@@ -48,7 +47,7 @@ function Home() {
                 <h1>SHOP BY CATEGORY</h1>
             </div>
 
-            <div className=" md:flex ">
+            <div className=" md:flex max-w-[90vw] ">
                 
                 {/* <div className=" flex justify-between "> */}
                     <ProductCategory 

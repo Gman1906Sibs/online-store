@@ -43,9 +43,11 @@ function Header() {
                         <span className=" topText ">
                             Hello Guest
                         </span>
-                        <span className="bottomText">
-                            Sign In
-                        </span>
+                        <Link to="/login">
+                            <span className="bottomText">
+                                Sign In
+                            </span>
+                        </Link>
                     </div>
 
                     <div className=" flex flex-col items-center px-4 ">
