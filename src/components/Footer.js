@@ -16,7 +16,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <img src={Logo} className=" rounded-xl max-w-[100px] object-contain mr-[5%] md:hidden " alt="" />
+                {/* <img src={Logo} className=" rounded-xl max-w-[100px] object-contain mr-[5%] hidden " alt="" /> */}
                 
             </div>
 

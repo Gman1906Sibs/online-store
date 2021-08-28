@@ -32,7 +32,7 @@ function Login() {
             <div className=" flex-col max-w-[100vw] max-h-[100vh] m-3 md:p-5 ">
 
                 <Link to="/">
-                    <div className=" flex justify-center ">
+                    <div className=" max-h-15 flex justify-center ">
                         <img 
                             src={Logo}
                             alt="" 

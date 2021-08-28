@@ -64,7 +64,7 @@ function Header() {
                         </Link>
                     </div>
 
-                    <div className=" flex flex-col items-center px-4 ">
+                    <div className=" hidden md:flex flex-col items-center px-4 ">
                         <span className=" topText ">
                             Track Your
                         </span>

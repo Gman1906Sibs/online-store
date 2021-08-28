@@ -17,7 +17,7 @@ function Home() {
 
 
     return (
-        <div className=" bg-black min-h-[100vh] max-w-[100vw] lg:max-w-[1500px] " >
+        <div className=" bg-black min-h-[100vh] max-w-[100vw] lg:max-w-[1500px] justify-center items-center " >
             <div className=" hidden lg:flex " >
                 <HomeSlider />
             </div>
@@ -43,7 +43,7 @@ function Home() {
                 />
             </div>
 
-            <div className=" z-50 text-[100px] flex justify-center m-10 underline text-[#ff4d00] ">
+            <div className=" z-50 text-[20px] md:text-50px lg:text-[100px] flex justify-center m-10 underline text-[#ff4d00] ">
                 <h1>SHOP BY CATEGORY</h1>
             </div>
 

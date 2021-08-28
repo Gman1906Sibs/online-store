@@ -12,11 +12,11 @@ function Checkout() {
 
 
     return (
-        <div className=" md:flex p-3 ">
+        <div className=" md:flex p-3 max-w-[1500px] w-[100vw]">
             <div className=" w-[75vw] my-3 ">
                 <div className=" flex justify-center w-[100vw] "> 
                     <img
-                        className=" max-w-[500px] " 
+                        className="hidden md:flex max-w-[500px] " 
                         src="https://image.shutterstock.com/image-photo/big-collection-auto-spare-parts-260nw-1758243971.jpg" 
                         alt="" 
                     />
