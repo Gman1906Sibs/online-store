@@ -8,6 +8,8 @@ function Checkout() {
 
     const cart = cartState.cart.cart
 
+    const user = cartState.cart.user?.email
+
 
     return (
         <div className=" md:flex p-3 ">
@@ -22,7 +24,8 @@ function Checkout() {
 
                 <div className=" border-b-[1px] border-[#ff4d00] pt-[10px] md:pt-[0px] ">
                     <h3 className=" font-light text-[22px] ">
-                        Welcome 
+                        { user ? `Welcome ${user}` : "Please Sign Into Continue" }
+                        
                     </h3>
 
                     <h1>

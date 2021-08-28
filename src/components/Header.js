@@ -4,12 +4,21 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from "react-router-dom";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { useSelector } from "react-redux";
+import { auth } from "../firebase";
 
 function Header() {
 
     const cart = useSelector((state) => state);
 
+    const user = cart.cart.user?.email
+
     const items = cart.cart.cart.length;
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
 
     return (
         <div className=" z-50 sticky top-0 w-[100vw] max-w-[1500px] ">
@@ -40,12 +49,17 @@ function Header() {
                 <div className=" flex  ">
 
                     <div className=" flex flex-col items-center ">
-                        <span className=" topText ">
-                            Hello Guest
+                        {/* <span className=" topText "> */}
+                        <span className={` topText ${ user ? "text-[#ff4d00]" : "text-[#888888]" }`} >
+                            {
+                                user ? `Hello ${user}` : `Hello Guest`
+                            }
                         </span>
-                        <Link to="/login">
-                            <span className="bottomText">
-                                Sign In
+                        <Link to={!user && "/login"} className=" text-[#888888] bottomText no-underline hover:text-[#888888] ">         
+                            <span onClick={handleAuthentication} className=" ">
+                                {
+                                    user ? "Sign Out" : "Sign In"
+                                }
                             </span>
                         </Link>
                     </div>
@@ -60,9 +74,10 @@ function Header() {
                     </div>
 
                     
-                        <Link to="/checkout">
+                       
+                        <Link to="/checkout" className={`no-underline  ${items > 0 ? "text-[#ff4d00] hover:text-[#ff4d00]" : "text-[#888888] hover:text-[#888888]" }` }>
                             <div className=" justify-center ">
-                                <ShoppingCartIcon className=" " />
+                                <ShoppingCartIcon  />
                                 <span>{items}</span>
                             </div>
                         </Link>

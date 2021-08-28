@@ -31,3 +31,12 @@ export const emptyCart= ([]) => {
         })
     }
 }
+
+export const setUser = (authUser) => {
+    return(dispatch) => {
+        dispatch({
+            type: "SET_USER",
+            user: authUser
+        })
+    }
+}
