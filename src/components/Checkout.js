@@ -12,7 +12,7 @@ function Checkout() {
 
 
     return (
-        <div className=" md:flex p-3 max-w-[1500px] w-[100vw]">
+        <div className=" md:flex p-3  w-[100vw]">
             <div className=" w-[75vw] my-3 ">
                 <div className=" flex justify-center w-[100vw] "> 
                     <img

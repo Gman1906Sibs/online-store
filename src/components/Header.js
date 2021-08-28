@@ -21,7 +21,7 @@ function Header() {
     }
 
     return (
-        <div className=" z-50 sticky top-0 w-[100vw] max-w-[1500px] ">
+        <div className=" z-50 sticky top-0 w-[100vw] ">
             <div className=" px-4 flex justify-between items-center bg-black text-[#888888] text-xs p-2 sticky z-20 top-0 ">
                 <Link to="/">
                     <img src={Logo} alt="" className=" h-9 rounded-md " />

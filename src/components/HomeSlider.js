@@ -9,7 +9,7 @@ import Img5 from "../images/ama5.jpg";
 function HomeSlider() {
     return (
 
-        <div className=" z-[1] relative mb-[-130px] max-w-[1500px] ">
+        <div className=" z-[1] relative mb-[-130px] w-[100vw] ">
             <Carousel>
                 <Carousel.Item>
                     <img
