@@ -31,8 +31,8 @@ function Login() {
     return (
             <div className=" flex-col max-w-[100vw] max-h-[100vh] m-3 md:p-5 ">
 
-                <Link to="/">
-                    <div className=" max-h-15 flex justify-center ">
+                <Link className="hidden md:flex max-h-15 " to="/">
+                    <div className="  flex justify-center ">
                         <img 
                             src={Logo}
                             alt="" 
@@ -41,6 +41,16 @@ function Login() {
                     </div>
                 </Link>
 
+                <div className=" w-[100vw] flex justify-center ">
+                    <div className=" max-h-[15] md:hidden  justify-center ">
+                            <img 
+                                src={Logo}
+                                alt="" 
+                                className=" max-w-[130px] rounded-lg "
+                            />
+                    </div>
+                </div>
+                    
                 <div className=" flex justify-center ">
                     <div className=" flex-col max-w-[100vw] md:max-w-[400px] p-3 border-[2px] border-gray-100 m-3 rounded-lg ">
                         

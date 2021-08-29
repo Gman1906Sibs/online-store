@@ -17,11 +17,12 @@ function Home() {
 
 
     return (
-        <div className=" bg-black min-h-[100vh] w-[100vw] lg:max-w-[1500px] justify-center items-center " >
+        <div className=" bg-black min-h-[100vh] w-[100vw] justify-center items-center " >
             <div>
-                <div className=" hidden lg:flex " >
+                <div className=" hidden lg:flex lg:justify-center " >
                     <HomeSlider />
                 </div>
+
                     <div className=" z-[-5] max-w-[1500px] flex-col  md:flex md:flex-row md:justify-evenly ">
                         <VehicleCategory 
                             img="https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-85e0e9ab23134961c88e4ecea2bff53f.jpg" 

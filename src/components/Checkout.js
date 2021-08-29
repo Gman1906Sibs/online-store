@@ -1,6 +1,7 @@
 import Subtotal from "./Subtotal";
 import { useSelector } from "react-redux";
 import CheckoutProduct from "./CheckoutProduct";
+import Footer from "./Footer";
 
 function Checkout() {
 

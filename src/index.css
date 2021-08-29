@@ -13,7 +13,7 @@
     }
 
     .sliderImage {
-        @apply z-[1] mb-[-130px] max-h-[780px];
+        @apply z-[1] mb-[-130px] max-h-[780px] ;
     }
 
 }

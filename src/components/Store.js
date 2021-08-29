@@ -7,7 +7,7 @@ import ViewMore from "./ViewMore";
 function Store() {
     return (
         <div>
-            <div className=" bg-black min-h-[100vh] px-3 ">
+            <div className=" bg-black min-h-[100vh] px-3 w-[100vw] ">
                 <Advert  image="https://www.tjrstudios.com/wp-content/uploads/2018/07/TJR_WebsiteBanner_Animation1.gif" />   
 
                 <SalesTitle 

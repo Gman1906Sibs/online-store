@@ -12,40 +12,49 @@ function HomeSlider() {
         <div className=" z-[1] relative mb-[-130px] w-[100vw] ">
             <Carousel>
                 <Carousel.Item>
-                    <img
-                    className=" sliderImage "
-                    src={Img1}
-                    alt="First slide"
-                    />
+                    <div className=" w-[100vw] flex justify-center">
+                        <img
+                        className=" sliderImage "
+                        src={Img1}
+                        alt="First slide"
+                        />
+                    </div>
                 </Carousel.Item>
                 <Carousel.Item>
+                <div className=" w-[100vw] flex justify-center">
                     <img
-                    className=" sliderImage "
-                    src={Img2}
-                    alt="Second slide"
-                    />
-
+                        className=" sliderImage "
+                        src={Img2}
+                        alt="Second slide"
+                        />
+                </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                    className=" sliderImage "
-                    src={Img3}
-                    alt="Third slide"
-                    />
+                    <div className=" w-[100vw] flex justify-center">
+                        <img
+                            className=" sliderImage "
+                            src={Img3}
+                            alt="Third slide"
+                            />
+                    </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                    className=" sliderImage "
-                    src={Img4}
-                    alt="Third slide"
-                    />
+                    <div className=" w-[100vw] flex justify-center">
+                        <img
+                        className=" sliderImage "
+                        src={Img4}
+                        alt="Third slide"
+                        />
+                    </div>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
-                    className=" sliderImage "
-                    src={Img5}
-                    alt="Third slide"
-                    />
+                    <div className=" w-[100vw] flex justify-center">
+                        <img
+                        className=" sliderImage "
+                        src={Img5}
+                        alt="Third slide"
+                        />
+                    </div>
                 </Carousel.Item>
             </Carousel>
         </div>
