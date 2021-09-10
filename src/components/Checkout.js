@@ -1,15 +1,14 @@
 import Subtotal from "./Subtotal";
 import { useSelector } from "react-redux";
 import CheckoutProduct from "./CheckoutProduct";
-import Footer from "./Footer";
 
 function Checkout() {
 
-    const cartState = useSelector((state) => state)
+    const cartState = useSelector((state) => state);
 
-    const cart = cartState.cart.cart
+    const cart = cartState.cart.cart;
 
-    const user = cartState.cart.user?.email
+    const user = cartState.cart.user?.email;
 
 
     return (

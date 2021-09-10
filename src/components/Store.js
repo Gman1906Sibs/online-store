@@ -8,7 +8,7 @@ function Store() {
     return (
         <div>
             <div className=" bg-black min-h-[100vh] px-3 w-[100vw] ">
-                <Advert  image="https://www.tjrstudios.com/wp-content/uploads/2018/07/TJR_WebsiteBanner_Animation1.gif" />   
+                <Advert  image="https://www.tjrstudios.com/wp-content/uploads/2018/07/TJR_WebsiteBanner_Animation1.gif" className=" max-w-[100vw] object-contain " />   
 
                 <SalesTitle 
                     title='Engine Spares' 
@@ -76,7 +76,7 @@ function Store() {
                     <ViewMore />
                 </div>   
 
-                <Advert  image="https://cdn.shopify.com/s/files/1/2016/3805/files/LorisSaleBanner_1024x1024.gif" />     
+                <Advert  image="https://cdn.shopify.com/s/files/1/2016/3805/files/LorisSaleBanner_1024x1024.gif" className=" max-w-[100vw] object-contain " />     
 
                 <SalesTitle 
                     title='Bodykits / Fairings' 
@@ -144,7 +144,7 @@ function Store() {
                     <ViewMore />
                 </div>  
 
-                <Advert image="https://strapi.synerise.com/uploads/57ba8e53d4c140d39566e2b5f341ea28.gif" /> 
+                <Advert image="https://strapi.synerise.com/uploads/57ba8e53d4c140d39566e2b5f341ea28.gif" className=" max-w-[100vw] object-contain "/> 
 
                 <Footer />
             </div>

@@ -1,5 +1,6 @@
 import CurrencyFormat from "react-currency-format";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Subtotal() {
 
@@ -12,7 +13,9 @@ function Subtotal() {
         return amount.price
     })
 
-    const value = amounts.reduce((acc, val) => acc + val, 0)
+    const value = amounts.reduce((acc, val) => acc + val, 0);
+
+    const history = useHistory();
 
 
     return (
@@ -46,7 +49,11 @@ function Subtotal() {
                 
             />
 
-<button className=" py-1 px-3 rounded-lg bg-[#ff4d00] w-full text-[12px] text-white " >Proceed to checkout</button>
+<button className=" py-1 px-3 rounded-lg bg-[#ff4d00] w-full text-[12px] text-white " 
+    onClick= {e=> history.push("/payment")}
+>
+    Proceed to checkout
+</button>
         </div>
 
         
