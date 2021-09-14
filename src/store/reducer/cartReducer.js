@@ -17,16 +17,29 @@ const cartReducer = ( state=initialState, action) => {
         case "REMOVE_FROM_CART":
             let newCart = state.cart;
             
-            function isIndex(product) {
-                return product.id === action.id;
+            // function isIndex(product) {
+            //     return product.id === action.id;
+            // }
+            // const index = newCart.findIndex(isIndex);
+            // const editedCart= newCart.splice(index, 1);
+
+            const index = state.cart.findIndex(
+                (cartItem) => cartItem.id === action.id
+            );
+
+
+            if (index >= 0) {
+                newCart.splice(index, 1);
+            }else {
+                console.warn(`Can't remove product ${action.id}`)
             }
-            const index = newCart.findIndex(isIndex);
-            const editedCart= newCart.splice(index, 1);
 
             return {
                 ...state,
                 cart: newCart
             }
+
+            
 
         case "EMPTY_CART":
             return {

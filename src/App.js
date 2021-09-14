@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Store from "./components/Store";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
+import Orders from "./components/Orders";
 import { auth } from "./firebase";
 import Payment from "./components/Payment";
 import { loadStripe } from "@stripe/stripe-js";
@@ -50,6 +51,11 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="/orders">
+            <Header />
+            <Orders />
           </Route>
 
           <Route path="/checkout">

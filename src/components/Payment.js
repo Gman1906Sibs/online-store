@@ -5,12 +5,22 @@ import CheckoutProduct from "./CheckoutProduct";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { useHistory } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import { actionCreators } from "../store/index";
+import { db } from "../firebase";
+
 
 function Payment() {
+
+    const dispatch = useDispatch();
+
+    const { emptyCart } = bindActionCreators(actionCreators, dispatch)
 
     const history = useHistory();
     const cartState = useSelector((state) => state);
     const cart = cartState.cart.cart
+    const user = cartState.cart.user
+    // console.log("user id >>>", user.uid)
 
     const amounts = cart.map((amount) => {
         return amount.price
@@ -55,9 +65,17 @@ function Payment() {
         }).then(({ paymentIntent }) => {
             // paymentIntent = payment confirmation
 
+            db.collection("users").doc(user?.uid).collection("orders").doc(paymentIntent.id).set({
+                cart: cart,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
+
             setSucceded(true);
             setError(null)
             setProcessing(false)
+
+            emptyCart([])
 
             history.replace("/orders") })        
     }
@@ -114,7 +132,7 @@ function Payment() {
                     </div>
                 </div>
 
-                <div className = " pb-3 border-b-[3px] border-gray-200 ">
+                <div className = " p-3 border-b-[3px] border-gray-200 ">
                     <h4 className=" py-2 ">Payment Method</h4>
 
                     <form onSubmit= {handleSubmit}>
@@ -139,7 +157,7 @@ function Payment() {
                                 
                             />
 
-                            <button disabled={processing || disabled || succeded} className="">
+                            <button disabled={processing || disabled || succeded} className=" bg-[#ff4d00] max-w-[300px] w-full px-3 py-[1px] text-white text-md rounded-lg ">
                                 <span>{processing ? <p>Processing</p> : "Buy Now"} </span>
                             </button>
 

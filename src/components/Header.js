@@ -55,7 +55,7 @@ function Header() {
                                 user ? `Hello ${user}` : `Hello Guest`
                             }
                         </span>
-                        <Link to={!user && "/login"} className=" text-[#888888] bottomText no-underline hover:text-[#888888] ">         
+                        <Link to={!user && "/login"} className=" text-[#888888] bottomText no-underline hover:text-[#ff4d00] ">         
                             <span onClick={handleAuthentication} className=" ">
                                 {
                                     user ? "Sign Out" : "Sign In"
@@ -63,15 +63,18 @@ function Header() {
                             </span>
                         </Link>
                     </div>
-
-                    <div className=" hidden md:flex flex-col items-center px-4 ">
-                        <span className=" topText ">
-                            Track Your
-                        </span>
-                        <span className=" bottomText ">
-                            Orders
-                        </span>
-                    </div>
+                    
+                    <Link to="/orders" className=" text-[#888888] bottomText no-underline hover:text-[#ff4d00] ">
+                        <div className=" flex flex-col items-center px-4 ">
+                            <span className=" topText ">
+                                Track Your
+                            </span>
+                            <span className=" bottomText ">
+                                Orders
+                            </span>
+                        </div>
+                    </Link>
+                    
 
                     
                        

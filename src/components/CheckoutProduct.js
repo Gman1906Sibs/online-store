@@ -3,7 +3,7 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "../store/index";
 
 
-function Product({ id, title, text, price, rating, image }) {
+function Product({ id, title, text, price, rating, image, hideButton }) {
 
     const cart = useSelector((state) => state);
 
@@ -31,19 +31,21 @@ function Product({ id, title, text, price, rating, image }) {
             </div>
 
             <img 
-                className=""
+                className=" max-w-[200px] "
                 src={image}
                 alt="" 
             />
 
             <div className=" w-full flex justify-center ">
-                <button
-                    
-                    className=" bg-[#ff4d00] px-3 py-1 text-white rounded-lg "
-                    onClick= {()=> removeFromCart ({ id, title, text, price, rating, image })}
-                >
-                    Remove From Cart
-                </button>
+                {!hideButton && (
+                    <button
+                        
+                        className=" bg-[#ff4d00] px-3 py-1 text-white rounded-lg "
+                        onClick= {()=> removeFromCart ({ id })}
+                    >
+                        Remove From Cart
+                    </button>
+                )}
             </div>
 
             
